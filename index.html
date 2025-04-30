@@ -2019,7 +2019,92 @@ textarea {
     }
 }
 
+/* About Section */
+.about-section {
+    background-color: #f8fafc;
+    padding: 80px 20px;
+    text-align: center;
+}
 
+.about-section .section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-section .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: fadeInUp 0.5s ease forwards;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-photo {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo img {
+    transform: scale(1.1);
+}
+
+.team-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Testimonial Section */
 .testimonials-section {
     
@@ -2958,7 +3043,7 @@ textarea {
                             <p>Victims don’t know how to file cybercrime complaints effectively</p>
                         </div>
                         <div class="card-back">
-                            <img src="assets/comic2.svg" alt="Password Security Comic">
+                            <img src="images/_com5.png" alt="Password Security Comic">
                         </div>
                     </div>
                     
@@ -3373,6 +3458,7 @@ textarea {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="testimonial-dots">
                     <span class="dot active" data-slide="0"></span>
@@ -3405,8 +3491,7 @@ textarea {
                         </div>
                         <h3>Live Chat</h3>
                         <p>Connect instantly with a support specialist</p>
-                        <a href="#chatbotWindow"><button class="chat-btn">Start Chat Now</button></a>
-                    </div>
+                        <a href="#chatbotWindow"><button id="startChatBtn" class="chat-btn">Start Chat Now</button></a>                    </div>
                     
                     <div class="emergency-card form">
                         <div class="emergency-icon">
@@ -3481,6 +3566,94 @@ textarea {
             </div>
         </div>
     </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">The dedicated professionals behind Cybersafe Legal</p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/shour.jpg" alt="Shourya Bansal">
+                    </div>
+                    <div class="team-info">
+                        <h3>Shourya Bansal</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/adi.jpg" alt="Aditya Modani">
+                    </div>
+                    <div class="team-info">
+                        <h3>Aditya Modani</h3>
+                        <p>Website Developer</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/lvan.jpg" alt="Lavanya Aggarwal">
+                    </div>
+                    <div class="team-info">
+                        <h3>Lavanya Aggarwal</h3>
+                        <p>Legal Advisor</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/yu.jpg" alt="Ayush Sharma">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ayush Sharma</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 5 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/ay.jpg" alt="Yuvraj Singh Shekhawat">
+                    </div>
+                    <div class="team-info">
+                        <h3>Yuvraj Singh Shekhawat</h3>
+                        <p>News Editor</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 6 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/priy.jpg" alt="Priyank Sharma">
+                    </div>
+                    <div class="team-info">
+                        <h3>Priyank Sharma</h3>
+                        <p>Marketing Expert</p>
+                    </div>
+                </div>
+    
+                <!-- Team Member 7 -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="images/bhy.jpg" alt="Bhavya Pareek">
+                    </div>
+                    <div class="team-info">
+                        <h3>Bhavya Pareek</h3>
+                        <p>Digital Forensics Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -4311,7 +4484,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const startChatBtn = document.getElementById('startChatBtn');
+    const chatbotWindow = document.getElementById('chatbotWindow');
 
+    startChatBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        chatbotWindow.classList.add('active'); // Open the chatbot window
+    });
+});
 
     </script>
     <script>
